@@ -3,7 +3,8 @@
     <header>
       <h1 class="text-3xl font-bold text-left">TODO APP</h1>
     </header>
-    <section id="taskCount" class="flex">
+    <!-- STATUS TODO -->
+    <!-- <section id="taskCount" class="flex">
       <div
         class="flex flex-col p-2 border border-black rounded-md m-2"
         v-for="(status, index) in todoStatus"
@@ -12,12 +13,13 @@
         {{ status.name }}
         <div class="font-bold">{{ status.value }}</div>
       </div>
-    </section>
+    </section> -->
 
     <section id="taskInput">
       <div class="border border-black rounded-sm">
         <div class="flex">
-          <form class="p-3 flex" action="">
+          <!-- FORM TODO -->
+          <!-- <form class="p-3 flex" action="">
             <div class="flex flex-col mx-2">
               <label for="name">Name</label>
               <input
@@ -29,7 +31,6 @@
             </div>
             <div class="flex flex-col mx-2">
               <label for="priority">Priority</label>
-              <!-- <input class="bg-white border border-black" type="text" /> -->
               <select
                 v-model="todoInput.priority"
                 name="priority"
@@ -50,7 +51,7 @@
                 Save
               </button>
             </div>
-          </form>
+          </form> -->
         </div>
       </div>
     </section>
@@ -59,8 +60,9 @@
       <div class="todos flex flex-wrap justify-between gap-7 lg:gap-3 w-full">
         <div class="todo-not-completed w-full">
           <h3 class="text-left font-bold text-xl pb-3">TODO</h3>
+          <div class="text-center font-bold py-20" v-if="emptyTodo"></div>
+          <!-- TODO UNCOMPLETED -->
           <ul class="flex flex-col gap-5">
-            <div class="text-center font-bold py-20" v-if="emptyTodo"></div>
             <li
               class="border border-black rounded-md py-4 px-3"
               v-for="(todo, index) in todoCompleted"
@@ -100,6 +102,7 @@
               </div>
             </li>
           </ul>
+            <!-- TODO UNCOMPLETED -->
         </div>
         <div class="todo-completed w-full">
           <h3 class="text-left font-bold text-xl pb-3">COMPLETED</h3>
@@ -107,7 +110,8 @@
             class="text-center font-bold py-20"
             v-if="emptyCompletedTodo"
           ></div>
-          <ul class="flex flex-col gap-5">
+          <!-- TODO DONE -->
+          <!-- <ul class="flex flex-col gap-5">
             <li
               class="border border-black rounded-md py-4 px-3"
               v-for="(todo, index) in todoNotCompleted"
@@ -130,7 +134,7 @@
                 </div>
               </div>
             </li>
-          </ul>
+          </ul> -->
         </div>
       </div>
     </section>
